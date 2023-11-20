@@ -1,2 +1,2 @@
-# hslu
-Code von allen Modulen
+# OOP
+Code von OOP
