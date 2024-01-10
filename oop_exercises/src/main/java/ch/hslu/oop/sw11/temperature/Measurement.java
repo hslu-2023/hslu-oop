@@ -3,6 +3,12 @@ package ch.hslu.oop.sw11.temperature;
 import java.time.LocalDateTime;
 import java.util.Objects;
 
+/**
+ * The {@code Measurement} class represents a measurement object that contains a temperature and timestamp.
+ *
+ * @author Raquel Lima
+ * @version 1.0
+ */
 public class Measurement implements Comparable<Measurement> {
 
     Temperature temperature;
