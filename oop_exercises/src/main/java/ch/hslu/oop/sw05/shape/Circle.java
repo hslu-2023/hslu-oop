@@ -1,7 +1,5 @@
 package ch.hslu.oop.sw05.shape;
 
-import ch.hslu.oop.sw05.shape.Shape;
-
 public class Circle extends Shape {
 
     private int diameter;

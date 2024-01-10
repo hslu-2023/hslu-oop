@@ -1,9 +1,9 @@
-package ch.hslu.oop.sw09;
+package ch.hslu.oop.sw10.temperature;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.Objects;
-
-import org.slf4j.LoggerFactory;
-import org.slf4j.Logger;
 
 /**
  * The {@code Temperature} class represents a temperature value and provides methods for conversion between Celsius and Kelvin units.
@@ -133,5 +133,12 @@ public final class Temperature implements Comparable<Temperature> {
             return 0;
         }
         return Float.compare(this.celsius, other.celsius);
+    }
+
+    @Override
+    public String toString() {
+        return "Temperature{" +
+                "celsius=" + celsius +
+                '}';
     }
 }

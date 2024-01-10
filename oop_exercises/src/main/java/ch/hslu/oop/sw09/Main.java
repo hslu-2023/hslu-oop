@@ -37,7 +37,8 @@ public class Main {
 
             try {
                 LOG.debug("try-Block: Begin");
-                Float.parseFloat(input);
+                float value = Float.parseFloat(input);
+                Temperature temperature = Temperature.createFromCelsius(value);
                 System.out.println("Temperature: " + input + "°C");
                 LOG.info("Temperature: {}°C", input);
                 LOG.debug("try-Block: End");
@@ -45,6 +46,8 @@ public class Main {
             } catch (NumberFormatException e) {
                 LOG.error("NumberFormatException caught! Please enter a valid temperature value.", e);
                 System.out.println("Please enter a valid temperature value.");
+            } catch (IllegalArgumentException e) {
+                LOG.error("IllegalArgumentException caught! Please enter a valid temperature value. Temperature should be greater than or equal to -273.15 Celsius.");
             }
 
         } while (true);

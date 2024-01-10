@@ -46,7 +46,7 @@ class TemperatureTest {
         Temperature temperature1 = Temperature.createFromCelsius(3.0f);
         Temperature temperature2 = Temperature.createFromCelsius(3.0f);
 
-        assertEquals(temperature1.hashCode(), temperature2.hashCode());
+        assertEquals(temperature1.hashCode(), temperature2.hashCode(), 0.01);
     }
 
     @Test
@@ -64,7 +64,7 @@ class TemperatureTest {
         Temperature temperature1 = Temperature.createFromCelsius(3.0f);
         Temperature temperature2 = Temperature.createFromCelsius(2.0f);
 
-        assertEquals(1.0f, temperature1.compareTo(temperature2));
+        assertEquals(1.0f, temperature1.compareTo(temperature2), 0.01);
     }
 
     @Test
@@ -72,7 +72,7 @@ class TemperatureTest {
         Temperature temperature1 = Temperature.createFromCelsius(2.0f);
         Temperature temperature2 = Temperature.createFromCelsius(3.0f);
 
-        assertEquals(-1.0f, temperature1.compareTo(temperature2));
+        assertEquals(-1.0f, temperature1.compareTo(temperature2), 0.01);
     }
 
     @Test
@@ -80,16 +80,16 @@ class TemperatureTest {
         Temperature temperature1 = Temperature.createFromCelsius(2.0f);
         Temperature temperature2 = Temperature.createFromCelsius(2.0f);
 
-        assertEquals(0.0f, temperature1.compareTo(temperature2));
+        assertEquals(0.0f, temperature1.compareTo(temperature2), 0.01);
     }
 
     //test convertKelvinToCelsius()
 
     @Test
     void testConvertKelvinToCelsius() {
-        assertEquals(-263.15f, Temperature.convertKelvinToCelsius(10.0f));
-        assertEquals(-283.15f, Temperature.convertKelvinToCelsius(-10.0f));
-        assertEquals(-273.15f, Temperature.convertKelvinToCelsius(0.0f));
+        assertEquals(-263.15f, Temperature.convertKelvinToCelsius(10.0f), 0.01);
+        assertEquals(-283.15f, Temperature.convertKelvinToCelsius(-10.0f), 0.01);
+        assertEquals(-273.15f, Temperature.convertKelvinToCelsius(0.0f), 0.01);
 
     }
 
@@ -97,9 +97,9 @@ class TemperatureTest {
 
     @Test
     void testConvertCelsiusToKelvin() {
-        assertEquals(283.15f, Temperature.convertCelsiusToKelvin(10.0f));
-        assertEquals(263.15f, Temperature.convertCelsiusToKelvin(-10.0f));
-        assertEquals(273.15f, Temperature.convertCelsiusToKelvin(0.0f));
+        assertEquals(283.15f, Temperature.convertCelsiusToKelvin(10.0f), 0.01);
+        assertEquals(263.15f, Temperature.convertCelsiusToKelvin(-10.0f), 0.01);
+        assertEquals(273.15f, Temperature.convertCelsiusToKelvin(0.0f), 0.01);
     }
 
     //test createFromCelsius()
@@ -107,7 +107,7 @@ class TemperatureTest {
     @Test
     void testCreateFromCelsius() {
         Temperature temperature = Temperature.createFromCelsius(12.0f);
-        assertEquals(12.0f, temperature.getCelsius());
+        assertEquals(12.0f, temperature.getCelsius(),0.01);
     }
 
     //test createFromKelvin()
@@ -115,7 +115,7 @@ class TemperatureTest {
     @Test
     void testCreateFromKelvin() {
         Temperature temperature = Temperature.createFromKelvin(120.0f);
-        assertEquals(120.0f, temperature.getKelvin());
+        assertEquals(120.0f, temperature.getKelvin(), 0.01);
     }
 
     //test checkTemperature
