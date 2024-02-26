@@ -1,7 +1,5 @@
 package ch.hslu.oop.sw10.car;
 
-import ch.hslu.oop.sw04.Switchable;
-
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 import java.util.ArrayList;

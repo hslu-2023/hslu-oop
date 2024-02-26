@@ -1,8 +1,12 @@
 package ch.hslu.oop.sw10.temperature;
 
+import java.io.Serial;
 import java.util.EventObject;
 
 public class TemperatureEvent extends EventObject {
+
+    @Serial
+    private static final long serialVersionUID = 1L;
 
     private final TemperatureProgression.TemperaturExtrema extrema;
 

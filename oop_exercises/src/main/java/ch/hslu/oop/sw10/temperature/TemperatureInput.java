@@ -48,14 +48,14 @@ public class TemperatureInput implements TemperatureChangeListener {
             try {
                 float value = Float.parseFloat(input);
                 Temperature temperature = Temperature.createFromCelsius(value);
-                System.out.println("Temperature: " + input + "°C");
+                System.out.println("Temperature: " + input + "C");
                 list.add(temperature);
 
             } catch (NumberFormatException e) {
                 LOG.error("NumberFormatException caught! Please enter a valid temperature value in Celsius.", e);
                 System.out.println("Please enter a valid temperature value in Celsius.");
             } catch (IllegalArgumentException e) {
-                LOG.error("IllegalArgumentException caught! Please enter a valid temperature value in Celsius. Temperature should be greater than or equal to -273.15 °C.");
+                LOG.error("IllegalArgumentException caught! Please enter a valid temperature value in Celsius. Temperature should be greater than or equal to -273.15 C.");
             }
 
         } while (true);
@@ -64,10 +64,10 @@ public class TemperatureInput implements TemperatureChangeListener {
     @Override
     public void temperatureChange(TemperatureEvent evt) {
         if (evt.getExtrema() == TemperatureProgression.TemperaturExtrema.MIN) {
-            System.out.println("The min value has changed from " + evt.getOldValue() + "°C to " + evt.getNewValue() + "°C");
+            System.out.println("The min value has changed from " + evt.getOldValue() + "C to " + evt.getNewValue() + "C");
         }
         if (evt.getExtrema() == TemperatureProgression.TemperaturExtrema.MAX) {
-            System.out.println("The max value has changed from " + evt.getOldValue() + "°C to " + evt.getNewValue() + "°C");
+            System.out.println("The max value has changed from " + evt.getOldValue() + "C to " + evt.getNewValue() + "C");
         }
     }
 }

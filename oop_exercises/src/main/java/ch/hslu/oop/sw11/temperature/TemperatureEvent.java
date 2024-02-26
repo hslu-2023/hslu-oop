@@ -14,7 +14,7 @@ public class TemperatureEvent extends EventObject {
      * Constructs a new {@code TemperatureEvent}.
      *
      * @param source        the bean that fired the event
-     * @param extrema  the programmatic name of the property that was changed
+     * @param extrema       the programmatic name of the property that was changed
      * @param oldValue      the old value of the property
      * @param newValue      the new value of the property
      *

@@ -18,14 +18,10 @@ public class TemperatureProgression implements TemperatureProgressionInterface {
         this.temperatureList.add(t);
     }
 
-    ;
-
     @Override
     public void clear() {
         this.temperatureList.clear();
     }
-
-    ;
 
     @Override
     public int getCount() {

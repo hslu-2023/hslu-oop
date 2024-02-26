@@ -13,7 +13,7 @@ public class Car implements Switchable {
     final Light backLight;
     final Wiper wiper;
 
-    public Car(){
+    public Car() {
         this.engine = new Engine();
         this.frontLight = new Light();
         this.backLight = new Light();

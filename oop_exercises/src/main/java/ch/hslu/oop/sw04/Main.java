@@ -24,7 +24,7 @@ public class Main {
         Point endPoint = new Point(2,20);
 
         Line line = new Line(startPoint,endPoint);
-        Point p = line.getNewStartPoint();
+        Point p = line.getStartPoint();
         p.setXCoordinate(5);
         System.out.println(line.getStartPoint().getXCoordinate());
 

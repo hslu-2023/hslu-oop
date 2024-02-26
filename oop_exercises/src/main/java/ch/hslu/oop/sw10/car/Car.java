@@ -7,7 +7,7 @@ import java.beans.PropertyChangeListener;
  * The {@code Car} class represents a car. It implements the {@code Switchable} interface
  *
  * @author Raquel Lima
- * @version 1.0
+ * @version 2.0
  */
 public class Car implements Switchable, PropertyChangeListener {
 

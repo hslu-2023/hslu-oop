@@ -38,9 +38,8 @@ public class Main {
             try {
                 LOG.debug("try-Block: Begin");
                 float value = Float.parseFloat(input);
-                Temperature temperature = Temperature.createFromCelsius(value);
-                System.out.println("Temperature: " + input + "°C");
-                LOG.info("Temperature: {}°C", input);
+                System.out.println("Temperature: " + value + "C");
+                LOG.info("Temperature: {}C", input);
                 LOG.debug("try-Block: End");
 
             } catch (NumberFormatException e) {

@@ -21,8 +21,7 @@ public class Measurement implements Comparable<Measurement> {
     }
 
     public Measurement(Temperature temperature) {
-        this.temperature = temperature;
-        this.timestamp = LocalDateTime.now();
+        this(temperature, LocalDateTime.now());
     }
 
     public Temperature getTemperature() {

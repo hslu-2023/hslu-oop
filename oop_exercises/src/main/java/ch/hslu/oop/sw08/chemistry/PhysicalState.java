@@ -10,6 +10,6 @@ public enum PhysicalState {
     }
 
     public String getResult(ChemicalElement element, float temperature) {
-        return String.format("%s is %s at %.2f°C.", element.getClass().getSimpleName(), this.state, temperature);
+        return String.format("%s is %s at %.2fC.", element.getClass().getSimpleName(), this.state, temperature);
     }
 }
